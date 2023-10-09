@@ -1,5 +1,4 @@
 import Grid from "@/components/homePage/Grid";
-import Card from "../components/homePage/Card";
 
 export default function Home() {
 	return (

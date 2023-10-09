@@ -16,11 +16,9 @@ export default function Calculator() {
 		} else {
 			setNum(num + input);
 		}
-
-		//setNum(valor);
 	}
 
-	function clear(e) {
+	function clear() {
 		setNum(0);
 	}
 
@@ -36,7 +34,7 @@ export default function Calculator() {
 		}
 	}
 
-	function operatorHandler(e) {
+	function operatorHandler(e: any) {
 		var operatorInput = e.target.value;
 		setOperator(operatorInput);
 		setOldNum(num);
@@ -45,7 +43,7 @@ export default function Calculator() {
 
 	function calculate() {
 		if (operator === "+") {
-			setNum(parseFloat(oldnum) + parseFloat(num));
+			setNum(oldnum + num);
 		}
 		if (operator === "-") {
 			setNum(oldnum - num);
